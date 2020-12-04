@@ -1,1 +1,22 @@
+.navbar-item {
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
+.user-icon {
+  background-image: url("../navbarIcons/user.png");
+}
+
+.projects-icon {
+  background-image: url("../navbarIcons/code.png");
+}
+
+.contact-icon {
+  background-image: url("../navbarIcons/message.png");
+}
+
+.skillset-icon {
+  background-image: url("../navbarIcons/star.png");
+}
