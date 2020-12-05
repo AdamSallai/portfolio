@@ -3,16 +3,19 @@ import { ProjectBlueprint } from "./Data";
 
 const Project: React.FunctionComponent<{data: ProjectBlueprint}> = ({data}) => {
   return (
-    <div className="project-card">
+    <div className="project-card" data-id={data.id}>
       <img className="project-image" src={data.pictureURL} alt="" />
       <div className="project-textbox">
         <h1>{data.title}</h1>
+        <br/>
         <p>{data.description}</p>
-        <div>
-          { data.github.map(link => <a href={link} />) }
+        <div className="project-box">
+          Github:<br />
+          { data.github.map(link => <a href={link}>{link} </a>) }
         </div>
-        <div>
-          { data.technologies.map(technology => <p>{technology}, </p>) }
+        <div className="project-box">
+          Technologies:<br />
+          { data.technologies.map(technology => <span>{technology}, </span>) }
         </div>
       </div>
     </div>
