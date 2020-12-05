@@ -18,6 +18,9 @@
   }
 
   .user-icon {
+    animation: nav-link-load 1000ms ease-out 1100ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
     background-image: url("../navbarIcons/user.png");
 
     &:hover, &.active {
@@ -26,6 +29,9 @@
   }
 
   .projects-icon {
+    animation: nav-link-load 1000ms ease-out 500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
     background-image: url("../navbarIcons/code.png");
 
     &:hover, &.active {
@@ -34,6 +40,9 @@
   }
 
   .contact-icon {
+    animation: nav-link-load 1000ms ease-out 200ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
     background-image: url("../navbarIcons/message.png");
 
     &:hover, &.active {
@@ -42,6 +51,9 @@
   }
 
   .skillset-icon {
+    animation: nav-link-load 1000ms ease-out 800ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
     background-image: url("../navbarIcons/star.png");
 
     &:hover, &.active {
@@ -49,3 +61,16 @@
     }
   }
 }
+
+
+
+@keyframes nav-link-load {
+  0% {
+    transform: translateY(-500%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+ }
