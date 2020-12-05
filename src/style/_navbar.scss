@@ -20,7 +20,7 @@
   .user-icon {
     background-image: url("../navbarIcons/user.png");
 
-    &:hover {
+    &:hover, &.active {
       background-image: url("../navbarIcons/user-active.png");
     }
   }
@@ -28,7 +28,7 @@
   .projects-icon {
     background-image: url("../navbarIcons/code.png");
 
-    &:hover {
+    &:hover, &.active {
       background-image: url("../navbarIcons/code-active.png");
     }
   }
@@ -36,7 +36,7 @@
   .contact-icon {
     background-image: url("../navbarIcons/message.png");
 
-    &:hover {
+    &:hover, &.active {
       background-image: url("../navbarIcons/message-active.png");
     }
   }
@@ -44,7 +44,7 @@
   .skillset-icon {
     background-image: url("../navbarIcons/star.png");
 
-    &:hover {
+    &:hover, &.active {
       background-image: url("../navbarIcons/star-active.png");
     }
   }
