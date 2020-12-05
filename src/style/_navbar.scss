@@ -1,1 +1,76 @@
+.navbar {
+  position: absolute;
+  right: 0px;
+  display: flex;
+  width: 90px;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  justify-content:center;
+  height: 100%;
 
+  .navbar-item {
+    width: 72px;
+    height: 72px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 10px 0px;
+  }
+
+  .user-icon {
+    animation: nav-link-load 1000ms ease-out 1100ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    background-image: url("../navbarIcons/user.png");
+
+    &:hover, &.active {
+      background-image: url("../navbarIcons/user-active.png");
+    }
+  }
+
+  .projects-icon {
+    animation: nav-link-load 1000ms ease-out 500ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    background-image: url("../navbarIcons/code.png");
+
+    &:hover, &.active {
+      background-image: url("../navbarIcons/code-active.png");
+    }
+  }
+
+  .contact-icon {
+    animation: nav-link-load 1000ms ease-out 200ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    background-image: url("../navbarIcons/message.png");
+
+    &:hover, &.active {
+      background-image: url("../navbarIcons/message-active.png");
+    }
+  }
+
+  .skillset-icon {
+    animation: nav-link-load 1000ms ease-out 800ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    background-image: url("../navbarIcons/star.png");
+
+    &:hover, &.active {
+      background-image: url("../navbarIcons/star-active.png");
+    }
+  }
+}
+
+
+
+@keyframes nav-link-load {
+  0% {
+    transform: translateY(-500%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+ }
