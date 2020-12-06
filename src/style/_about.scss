@@ -1,9 +1,4 @@
-@function get-vw($target) {
-  $vw-context: (1300 * 0.01) * 1px;
-  @return ($target / $vw-context) * 1vw;
-}
-
-.about {
+.about, .contact {
   position: relative;
   background-color: black;
   border-radius: 50px;
@@ -20,5 +15,16 @@
   p {
     font-size: 28px;
     padding: 20px 60px;
+  }
+
+  .contact-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 400px;
+    font-size: 28px;
+    padding: 100px;
   }
 }

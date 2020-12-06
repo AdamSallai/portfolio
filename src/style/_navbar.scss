@@ -4,11 +4,16 @@
   right: 0;
   display: flex;
   order: 2;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   background-color: black;
-  justify-content:center;
-  height: 100%;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+  }
 
   .navbar-item {
     width: 72px;
@@ -16,10 +21,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     margin: 10px 0px;
+
   }
 
   .user-icon {
-    animation: nav-link-load 1000ms ease-out 1100ms;
+    animation: nav-link-load-vertical 1000ms ease-out 1100ms;
     animation-fill-mode: forwards;
     opacity: 0;
     background-image: url("../navbarIcons/user.png");
@@ -27,10 +33,14 @@
     &:hover, &.active {
       background-image: url("../navbarIcons/user-active.png");
     }
+
+    @media (min-width: 768px) {
+      animation-name: nav-link-load-horizontal;
+    }
   }
 
   .projects-icon {
-    animation: nav-link-load 1000ms ease-out 500ms;
+    animation: nav-link-load-vertical 1000ms ease-out 500ms;
     animation-fill-mode: forwards;
     opacity: 0;
     background-image: url("../navbarIcons/code.png");
@@ -38,10 +48,14 @@
     &:hover, &.active {
       background-image: url("../navbarIcons/code-active.png");
     }
+
+    @media (min-width: 768px) {
+      animation-name: nav-link-load-horizontal;
+    }
   }
 
   .contact-icon {
-    animation: nav-link-load 1000ms ease-out 200ms;
+    animation: nav-link-load-vertical 1000ms ease-out 200ms;
     animation-fill-mode: forwards;
     opacity: 0;
     background-image: url("../navbarIcons/message.png");
@@ -49,10 +63,14 @@
     &:hover, &.active {
       background-image: url("../navbarIcons/message-active.png");
     }
+
+    @media (min-width: 768px) {
+      animation-name: nav-link-load-horizontal;
+    }
   }
 
   .skillset-icon {
-    animation: nav-link-load 1000ms ease-out 800ms;
+    animation: nav-link-load-vertical 1000ms ease-out 800ms;
     animation-fill-mode: forwards;
     opacity: 0;
     background-image: url("../navbarIcons/star.png");
@@ -60,12 +78,27 @@
     &:hover, &.active {
       background-image: url("../navbarIcons/star-active.png");
     }
+
+    @media (min-width: 768px) {
+      animation-name: nav-link-load-horizontal;
+    }
   }
 }
 
 
 
-@keyframes nav-link-load {
+@keyframes nav-link-load-vertical {
+  0% {
+    transform: translateX(-500%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+ }
+
+ @keyframes nav-link-load-horizontal {
   0% {
     transform: translateY(-500%);
     opacity: 0;

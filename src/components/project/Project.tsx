@@ -11,11 +11,11 @@ const Project: React.FunctionComponent<{data: ProjectBlueprint}> = ({data}) => {
         <p>{data.description}</p>
         <div className="project-box">
           Github:<br />
-          { data.github.map(link => <a href={link}>{link} </a>) }
+          { data.github.map(link => <a key={link} href={link}>{link} </a>) }
         </div>
         <div className="project-box">
           Technologies:<br />
-          { data.technologies.map(technology => <span>{technology}, </span>) }
+          { data.technologies.join(', ') }
         </div>
       </div>
     </div>

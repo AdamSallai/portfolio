@@ -6,7 +6,7 @@ const Projects = () => {
 
   return (
     <div>
-      {dataOfProjects.map((data: ProjectBlueprint) => <Project data={data}/>)}
+      {dataOfProjects.map((data: ProjectBlueprint) => <Project key={data.id} data={data}/>)}
     </div>
   )
 }
