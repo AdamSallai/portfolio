@@ -5,7 +5,7 @@ import { skillsetData } from './SkillsetData';
 
 const Skillset = () => {
   return (
-    <div>
+    <div className="skillset-box">
       {
         skillsetData.map(data => <Skill data={data} />)
       }
