@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Skill from './Skill';
+import { skillsetData } from './SkillsetData';
+
 
 const Skillset = () => {
   return (
     <div>
-      Skillset
+      {
+        skillsetData.map(data => <Skill data={data} />)
+      }
     </div>
   )
 }

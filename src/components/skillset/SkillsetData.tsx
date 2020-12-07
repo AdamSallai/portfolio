@@ -1,10 +1,10 @@
-interface skillsetBlueprint {
+export interface SkillsetBlueprint {
   image: string,
   title: string,
   description: Array<string>
 }
 
-export const skillsetData: Array<skillsetBlueprint> = [
+export const skillsetData: Array<SkillsetBlueprint> = [
   {
     image: "",
     title: "JavaScript",
