@@ -11,7 +11,7 @@
   flex-direction: column;
   align-items: center;
   animation: card-animation 800ms ease-out;
-  @for $i from 1 through 5 {
+  @for $i from 1 through 4 {
     &:nth-child(#{$i}n) {
       animation-delay: #{$i * 0.2}s;
     }

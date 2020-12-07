@@ -7,7 +7,7 @@ const Skillset = () => {
   return (
     <div className="skillset-box">
       {
-        skillsetData.map(data => <Skill data={data} />)
+        skillsetData.map(data => <Skill key={data.id} data={data} />)
       }
     </div>
   )

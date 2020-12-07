@@ -17,6 +17,14 @@
   padding: 30px 50px;
   box-sizing: border-box;
   margin: 50px;
+  animation: load-card 800ms ease-out;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}n) {
+      animation-delay: #{$i * 0.3}s;
+    }
+  }
 
   img {
     width: 200px;
@@ -27,5 +35,16 @@
   h1, p {
     text-align: center;
     padding-top: 20px;
+  }
+}
+
+@keyframes load-card {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.0);
+    opacity: 1;
   }
 }
