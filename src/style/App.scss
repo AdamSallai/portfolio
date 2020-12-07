@@ -1,12 +1,47 @@
-@import "./_variables", "./navbar";
-
+@import "./_variables", "./navbar", "./about", "./project";
 
 * {
   padding: 0px;
   margin: 0px;
 }
 
-
 body {
-  background-color: #444444;
+  background-color: #151515;
+}
+
+.App {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.content {
+  flex: 1;
+  order: 1;
+  overflow-y: scroll;
+  overflow-x: hidden; 
+
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #151515;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #777;
 }
