@@ -21,13 +21,13 @@ export const skillsetData: Array<SkillsetBlueprint> = [
     id: 2,
     image: react,
     title: "React",
-    description: ["Hooks", "useContext", "Redux", "styled components"]
+    description: ["hooks", "styled components"]
   },
   {
     id: 3,
     image: java,
     title: "Java",
-    description: ["OOP", "Spring boot", "Hibernate", "Spring Security"]
+    description: ["OOP", "Spring boot", "Hibernate"]
   },
   {
     id: 4,

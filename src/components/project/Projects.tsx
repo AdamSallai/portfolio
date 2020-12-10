@@ -1,5 +1,5 @@
 import React from 'react';
-import { dataOfProjects, ProjectBlueprint } from "./Data";
+import { dataOfProjects, ProjectBlueprint } from "./ProjectData";
 import Project from './Project';
 
 const Projects = () => {

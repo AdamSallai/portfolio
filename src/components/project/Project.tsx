@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectBlueprint } from "./Data";
+import { ProjectBlueprint } from "./ProjectData";
 
 const Project: React.FunctionComponent<{data: ProjectBlueprint}> = ({data}) => {
   return (
